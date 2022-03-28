@@ -11,152 +11,166 @@ public class Main {
         int number = input.nextInt();
         int situation = number < 0 ? 0 : number < 10 ? 1 : number < 20 ? 2 : number < 100 ? 3 : number < 1000 ? 4 : number;
 
-        switch (situation) {
-            int firstDigit = number / 100;
-            int secondDigit = number / 10 % 10;
-            int thirdDigit = number % 10;
-            String first = "";
-            String second = "";
-            String third = "";
-            case 1: {
-                switch (number) {
-                    case 0:
-                        System.out.println("Zero");
-                        break;
-                    case 1:
-                        System.out.println("One");
-                        break;
-                    case 2:
-                        System.out.println("Two");
-                        break;
-                    case 3:
-                        System.out.println("Three");
-                        break;
-                    case 4:
-                        System.out.println("Four");
-                        break;
-                    case 5:
-                        System.out.println("Five");
-                        break;
-                    case 6:
-                        System.out.println("Six");
-                        break;
-                    case 7:
-                        System.out.println("Seven");
-                        break;
-                    case 8:
-                        System.out.println("Eight");
-                        break;
-                    case 9:
-                        System.out.println("Nine");
-                        break;
-                }
-            }
-            break;
+        int firstDigit = number / 100;
+        int secondDigit = number / 10 % 10;
+        int thirdDigit = number % 10;
+        String first = "";
+        String second = "";
+        String third = "";
+        String special = "";
 
-            case 2: {
-                int secondDigit = number % 10;
-                switch (secondDigit) {
+        switch (firstDigit) {
+            case 1:
+                first = "One";
+                break;
+            case 2:
+                first = "Two";
+                break;
+            case 3:
+                first = "Three";
+                break;
+            case 4:
+                first = "Four";
+                break;
+            case 5:
+                first = "Five";
+                break;
+            case 6:
+                first = "Six";
+                break;
+            case 7:
+                first = "Seven";
+                break;
+            case 8:
+                first = "Eight";
+                break;
+            case 9:
+                first = "Nine";
+                break;
+        }
+
+        switch (secondDigit) {
+            case 1:
+                switch (thirdDigit) {
                     case 0:
-                        System.out.println("Ten");
+                        special = "Ten";
                         break;
                     case 1:
-                        System.out.println("Eleven");
+                        special = "Eleven";
                         break;
                     case 2:
-                        System.out.println("Twelve");
+                        special = "Twelve";
                         break;
                     case 3:
-                        System.out.println("Thirteen");
+                        special = "Thirteen";
                         break;
                     case 4:
-                        System.out.println("Fourteen");
+                        special = "Fourteen";
                         break;
                     case 5:
-                        System.out.println("Fifteen");
+                        special = "Fifteen";
                         break;
                     case 6:
-                        System.out.println("Sixteen");
+                        special = "Sixteen";
                         break;
                     case 7:
-                        System.out.println("Seventeen");
+                        special = "Seventeen";
                         break;
                     case 8:
-                        System.out.println("Eighteen");
+                        special = "Eighteen";
                         break;
                     case 9:
-                        System.out.println("Nineteen");
+                        special = "Nineteen";
                         break;
                 }
-            }
-            break;
+                break;
+            case 2:
+                second = "Twenty";
+                break;
+            case 3:
+                second = "Thirty";
+                break;
+            case 4:
+                second = "Forty";
+                break;
+            case 5:
+                second = "Fifty";
+                break;
+            case 6:
+                second = "Sixty";
+                break;
+            case 7:
+                second = "Seventy";
+                break;
+            case 8:
+                second = "Eighty";
+                break;
+            case 9:
+                second = "Ninety";
+                break;
+        }
+
+        switch (thirdDigit) {
+            case 0:
+                third = "Zero";
+                break;
+            case 1:
+                third = "One";
+                break;
+            case 2:
+                third = "Two";
+                break;
+            case 3:
+                third = "Three";
+                break;
+            case 4:
+                third = "Four";
+                break;
+            case 5:
+                third = "Five";
+                break;
+            case 6:
+                third = "Six";
+                break;
+            case 7:
+                third = "Seven";
+                break;
+            case 8:
+                third = "Eight";
+                break;
+            case 9:
+                third = "Nine";
+                break;
+        }
+
+
+        switch (situation) {
+            case 1:
+                System.out.println(third);
+                break;
+
+            case 2:
+                System.out.println(special);
+                break;
 
             case 3: {
-                int firstDigit = number / 10;
-                int secondDigit = number % 10;
-                String first = "", second = "";
-                switch (firstDigit) {
-                    case 2:
-                        first = "Twenty";
-                        break;
-                    case 3:
-                        first = "Thirty";
-                        break;
-                    case 4:
-                        first = "Forty";
-                        break;
-                    case 5:
-                        first = "Fifty";
-                        break;
-                    case 6:
-                        first = "Sixty";
-                        break;
-                    case 7:
-                        first = "Seventy";
-                        break;
-                    case 8:
-                        first = "Eighty";
-                        break;
-                    case 9:
-                        first = "Ninety";
-                        break;
+                if (thirdDigit == 0) {
+                    third = "";
                 }
-                switch (secondDigit) {
-                    case 1:
-                        second = "One";
-                        break;
-                    case 2:
-                        second = "Two";
-                        break;
-                    case 3:
-                        second = "Three";
-                        break;
-                    case 4:
-                        second = "Four";
-                        break;
-                    case 5:
-                        second = "Five";
-                        break;
-                    case 6:
-                        second = "Six";
-                        break;
-                    case 7:
-                        second = "Seven";
-                        break;
-                    case 8:
-                        second = "Eight";
-                        break;
-                    case 9:
-                        second = "Nine";
-                        break;
-                }
-                System.out.println(first + " " + second);
+                System.out.println(second + " " + third);
             }
             break;
 
             case 4: {
-
+                if (secondDigit == 0) {
+                    System.out.println(first + " hundred and " + third);
+                } else if (secondDigit == 1) {
+                    System.out.println(first + " hundred and " + special);
+                } else {
+                    System.out.println(first + " hundred " + second + " " + third);
+                }
             }
+            break;
 
             case 0:
             default:
