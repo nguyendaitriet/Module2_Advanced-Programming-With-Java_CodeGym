@@ -13,7 +13,7 @@ public class LinearEquation {
         float c = input.nextFloat();
 
         if (a == 0) {
-            if (b-c == 0) {
+            if (b == c) {
                 System.out.println("The given linear equation has infinity numbers of solutions.");
             } else {
                 System.out.println("The given linear equation has no solution.");
