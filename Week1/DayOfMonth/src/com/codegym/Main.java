@@ -29,6 +29,7 @@ public class Main {
                 break;
             default:
                 System.out.println("You entered an invalid month!");
+                break;
         }
     }
 }
