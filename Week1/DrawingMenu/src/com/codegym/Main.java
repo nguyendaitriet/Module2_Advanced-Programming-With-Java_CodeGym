@@ -10,7 +10,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         while (choice != 0) {
             System.out.println("What would you like to do?");
-            System.out.println("1. Draw a right triangle.");
+            System.out.println("1. Draw an isosceles right triangle.");
             System.out.println("2. Draw a right square.");
             System.out.println("3. Draw a right rectagnle.");
             System.out.println("0. Exit.");
