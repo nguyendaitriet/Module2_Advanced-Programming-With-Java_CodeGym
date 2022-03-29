@@ -163,7 +163,11 @@ public class Main {
 
             case 4: {
                 if (secondDigit == 0) {
-                    System.out.println(first + " hundred and " + third);
+                    if (thirdDigit == 0) {
+                        System.out.println(first + " hundred");
+                    } else {
+                        System.out.println(first + " hundred and " + third);
+                    }
                 } else if (secondDigit == 1) {
                     System.out.println(first + " hundred and " + special);
                 } else {

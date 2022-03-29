@@ -11,5 +11,8 @@ public class Main {
         double usd = input.nextDouble();
         int vnd  = (int) usd * 23000;
         System.out.println(usd + " USD = " + vnd + " VND");
+
+        int a = 56, b =71, c = -23;
+        System.out.println("Sum: " + (a+b+c));
     }
 }
