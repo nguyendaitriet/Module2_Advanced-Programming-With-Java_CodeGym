@@ -10,7 +10,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         while (choice != 0) {
             System.out.println("What shape would you like to draw?");
-            System.out.println("1. Draw a right rectangle.");
+            System.out.println("1. Draw a rectangle.");
             System.out.println("2. Draw an isosceles right triangle.");
             System.out.println("3. Draw a isosceles triangle.");
             System.out.println("0. Exit.");
@@ -28,34 +28,39 @@ public class Main {
                         System.out.println("");
                     }
                     System.out.println("");
+
                     for (int i = size; i >0; i--) {
                         for (int j = 1; j <= i; j++) {
                             System.out.print("*  ");
                         }
                         System.out.println("");
                     }
+
                     System.out.println("");
                     for (int i = 1; i <= size; i++) {
                         for (int j = 1; j <= size; j++) {
                             if (j >= i) {
-                                System.out.print("*");
+                                System.out.print("*  ");
                             } else {
-                                System.out.print("");
+                                System.out.print("   ");
                             }
                         }
                         System.out.println("");
                     }
                     System.out.println("");
-                    for (int i = 1; i <= size; i++) {
-                        for (int j = 1; j <= size; j++) {
-                            if (i < j) {
-                                System.out.print("  ");
-                            } else {
-                                System.out.print("*  ");
-                            }
-                        }
-                        System.out.println("");
-                    }
+
+// Uncompleted
+//                    for (int i = 1; i <= size; i++) {
+//                        for (int j = 1; j <= size; j++) {
+//                            if (i <= j) {
+//                                System.out.print("   ");
+//                            } else {
+//                                System.out.print("*  ");
+//                            }
+//                        }
+//                        System.out.println("");
+//                    }
+//                    System.out.println("");
                 }
                 break;
 
