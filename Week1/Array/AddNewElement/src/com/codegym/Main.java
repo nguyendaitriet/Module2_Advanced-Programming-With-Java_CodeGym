@@ -24,7 +24,7 @@ public class Main {
             arr[i] = input.nextDouble();
         }
         System.out.println("Your entered array: " + Arrays.toString(arr));
-        
+
         return arr;
     }
 
@@ -43,11 +43,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
+        double[] myArray = createAnArray();;
+        int size = myArray.length;
 
         double value;
         int position;
-
         System.out.print("Enter value of an element you want to add: ");
         value = input.nextDouble();
         do {
@@ -61,6 +63,6 @@ public class Main {
             }
         } while (true);
 
-        System.out.println("--> Your new array after adding: " + Arrays.toString(addElementToArray(value, position, arr)));
+        System.out.println("--> Your new array after adding: " + Arrays.toString(addElementToArray(value, position, myArray)));
     }
 }
