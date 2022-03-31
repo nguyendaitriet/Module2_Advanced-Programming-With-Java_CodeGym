@@ -14,7 +14,7 @@ public class Main {
             size = input.nextInt();
             if (size < 1) {
                 System.out.println("Size is not less than 1. Try again!");
-                System.out.println("__________________________________");
+                System.out.println("___________________________________");
             }
         } while (size < 1);
 
