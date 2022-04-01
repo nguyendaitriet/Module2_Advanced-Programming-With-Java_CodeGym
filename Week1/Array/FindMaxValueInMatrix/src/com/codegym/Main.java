@@ -20,6 +20,8 @@ public class Main {
                 myMatrix[i][j] = input.nextDouble();
             }
         }
+
+        //Find max value
         System.out.println("Your matrix: " + Arrays.deepToString(myMatrix));
         double max = myMatrix[0][0];
         for (int i = 0; i < size; i++) {
