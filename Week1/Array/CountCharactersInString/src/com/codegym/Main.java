@@ -16,20 +16,20 @@ public class Main {
             myChar = input.next();
             if (myChar.length() > 1) {
                 System.out.println("You can only enter one character like this: 'a', '$', '1', ...");
-            } else {
-                for (int i = 0; i < myString.length(); i++) {
-                    if (myChar.charAt(0) == myString.charAt(i)) {
-                        count++;
-                    }
-                }
-                break;
+                continue;
             }
+            for (int i = 0; i < myString.length(); i++) {
+                if (myChar.charAt(0) == myString.charAt(i)) {
+                    count++;
+                }
+            }
+            break;
         } while (true);
 
         if (count == 0) {
             System.out.printf("Can't find '%s' in your string!", myChar);
-        } else {
-            System.out.printf("There %s %d character '%s' in your string.", count == 1 ? "is" : "are", count, myChar);
+            return;
         }
+        System.out.printf("There %s %d character '%s' in your string.", count == 1 ? "is" : "are", count, myChar);
     }
 }

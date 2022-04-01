@@ -19,9 +19,9 @@ public class Main {
                 markArray[i] = input.nextDouble();
                 if (markArray[i] < 0 || markArray[i] > 10) {
                     System.out.println("Invalid mark, please enter again!");
-                } else {
-                    break;
+                    continue;
                 }
+                break;
             } while (true);
             if (markArray[i] >= 5) {
                 count++;
