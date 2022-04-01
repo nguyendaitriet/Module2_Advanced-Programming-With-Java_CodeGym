@@ -34,8 +34,7 @@ public class Main {
         }
 
         double[] newArray = new double[total];
-        int k = 0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0, k = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 newArray[k++] = array[i][j];
             }

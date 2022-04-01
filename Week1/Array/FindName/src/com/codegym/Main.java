@@ -11,8 +11,8 @@ public class Main {
         String input_name = scanner.nextLine();
         boolean isExist = false;
         for (int i = 0; i < students.length; i++) {
-            if (students[i].equals(input_name)) {
-                System.out.printf("Position of %s in the list is %d.", input_name, i+1);
+            if (students[i] == input_name) {
+                System.out.printf("Position of %s in the list is %d.", input_name, i + 1);
                 isExist = true;
                 break;
             }
