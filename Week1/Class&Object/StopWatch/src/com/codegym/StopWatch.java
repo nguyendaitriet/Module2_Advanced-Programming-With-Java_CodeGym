@@ -7,12 +7,12 @@ public class StopWatch {
     private LocalTime startTime;
     private LocalTime endTime;
 
-    public LocalTime getStartTime() {
-        return this.startTime;
-    }
-    public LocalTime getEndTime() {
-        return this.endTime;
-    }
+//    public LocalTime getStartTime() {
+//        return this.startTime;
+//    }
+//    public LocalTime getEndTime() {
+//        return this.endTime;
+//    }
 
     public void setStartTime() {
         this.startTime = LocalTime.now();
