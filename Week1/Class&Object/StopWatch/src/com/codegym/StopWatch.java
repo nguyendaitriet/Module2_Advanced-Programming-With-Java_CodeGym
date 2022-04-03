@@ -27,7 +27,7 @@ public class StopWatch {
     }
 
     public long getElapsedTime() {
-        return ChronoUnit.MILLIS.between(this.startTime,this.endTime);
+        return ChronoUnit.MILLIS.between(this.startTime, this.endTime);
     }
 }
 
