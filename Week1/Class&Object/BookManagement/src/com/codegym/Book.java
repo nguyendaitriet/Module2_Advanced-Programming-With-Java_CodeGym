@@ -50,14 +50,11 @@ public class Book {
     }
 
     public boolean checkPublicationYear(Book otherBook) {
-        if (this.publicationYear == otherBook.publicationYear) {
-            return true;
-        }
-        return false;
+       return this.publicationYear == otherBook.publicationYear;
     }
 
     public double showPriceAfterDiscounting(double voucher) {
-        return this.price - this.price * voucher / 100;
+        return this.price * (1 - voucher / 100);
     }
 
     public void showBookName() {

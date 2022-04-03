@@ -45,7 +45,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        double[] myArray = createAnArray();;
+        double[] myArray = createAnArray();
+        ;
         int size = myArray.length;
 
         double value;
@@ -58,9 +59,9 @@ public class Main {
             if (position < 0 || position >= size) {
                 System.out.println("Your position doesn't exist, please enter again!");
                 System.out.println("________________________________________________");
-            } else {
-                break;
+                continue;
             }
+            break;
         } while (true);
 
         System.out.println("--> Your new array after adding: " + Arrays.toString(addElementToArray(value, position, myArray)));
