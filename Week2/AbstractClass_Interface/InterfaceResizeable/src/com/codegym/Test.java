@@ -12,6 +12,9 @@ public class Test {
 
         System.out.println(((Rectangle) allShape[1]).resize(12));
         System.out.println(((Circle) allShape[0]).resize(33));
+
+        Square mySquare = new Square(3);
+        mySquare.howToColor();
     }
 }
 
