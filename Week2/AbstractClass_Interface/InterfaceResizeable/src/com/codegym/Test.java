@@ -15,6 +15,7 @@ public class Test {
 
         Square mySquare = new Square(3);
         mySquare.howToColor();
+
     }
 }
 
