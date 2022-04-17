@@ -9,6 +9,7 @@ public class Main {
         newList.addElementFromFirst(1,4,6,7,8,1,4);
         System.out.println(newList);
         System.out.println(newList.getElementByIndex(2));
+        System.out.println(newList.getElementByIndex(-2));
     }
 }
 
