@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CleanCode_Refactoring.iml" filepath="$PROJECT_DIR$/CleanCode_Refactoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DrugManagement.iml" filepath="$PROJECT_DIR$/DrugManagement.iml" />
     </modules>
   </component>
 </project>
