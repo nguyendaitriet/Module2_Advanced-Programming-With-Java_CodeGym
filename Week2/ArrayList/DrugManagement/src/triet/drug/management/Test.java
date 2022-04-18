@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class Test {
     private static final DrugList myDrugList = new DrugList();
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Drug drug1 = new Drug(13734,"Acyclovir",200,400,1000,"23/02/2020","23/02/2023");
-        Drug drug2 = new Drug(28984,"Penicillin",250,300,450,"07/08/2021","07/08/2022");
-        myDrugList.addNewDrug(drug1,drug2);
+        Drug drug1 = new Drug(13734, "Acyclovir", 200, 400, 1000, "23/02/2020", "23/02/2023");
+        Drug drug2 = new Drug(28984, "Penicillin", 250, 300, 450, "07/08/2021", "07/08/2022");
+        myDrugList.addNewDrug(drug1, drug2);
         chooseInMenu();
     }
 
@@ -31,8 +32,7 @@ public class Test {
 
     public static char chooseAction() {
         System.out.print("Your choice is: ");
-        Scanner character = new Scanner(System.in);
-        return character.next().charAt(0);
+        return input.next().charAt(0);
     }
 
     public static void chooseInMenu() {
@@ -57,13 +57,22 @@ public class Test {
                 }
                 if (character == '4') {
                     int size = myDrugList.getTheNumberOfDrugs();
-                    System.out.printf("===> There %s %d %s in list.\n", size > 1 ? "are" : "is" , size, size > 1 ? "drugs" : "drug");
+                    System.out.printf("===> There %s %d %s in list.\n", size > 1 ? "are" : "is", size, size > 1 ? "drugs" : "drug");
                     returnOrExit();
                     break;
                 }
                 if (character == '5') {
                     myDrugList.removeAllDrugs();
                     System.out.println("===> All drugs are removed successfully from the list.");
+                    returnOrExit();
+                    break;
+                }
+                if (character == '6') {
+                    System.out.print("Enter drug ID: ");
+                    long id = input.nextLong();
+                    Drug idCheck = new Drug(id);
+                    boolean check = myDrugList.isExistedInList(idCheck);
+                    System.out.println(check ? "Drug is available in list." : "Sorry, drug is not available.");
                     returnOrExit();
                     break;
                 }
@@ -100,21 +109,27 @@ public class Test {
         } while (true);
     }
 
-    public static Drug getNewDrug(){
+    public static Drug getNewDrug() {
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter all information below:");
         System.out.println();
-        long id = System.currentTimeMillis()/100000000;
+        long id = System.currentTimeMillis() / 100000000;
         System.out.println("Drug ID: " + id);
-        System.out.print("Drug Name: "); String drugName = input.next();
-        System.out.print("Drug Content (mg): "); int drugContent = input.nextInt();
-        System.out.print("Quantity (tablet): "); int quantity = input.nextInt();
-        System.out.print("Price Per Tablet: "); double pricePerTablet = input.nextDouble();
-        System.out.print("Production Date: "); String productionDate = input.next();
-        System.out.print("Expiration Date: "); String expirationDate = input.next();
+        System.out.print("Drug Name: ");
+        String drugName = input.next();
+        System.out.print("Drug Content (mg): ");
+        int drugContent = input.nextInt();
+        System.out.print("Quantity (tablet): ");
+        int quantity = input.nextInt();
+        System.out.print("Price Per Tablet: ");
+        double pricePerTablet = input.nextDouble();
+        System.out.print("Production Date: ");
+        String productionDate = input.next();
+        System.out.print("Expiration Date: ");
+        String expirationDate = input.next();
         System.out.println();
         System.out.println("Added successfully!");
-        return new Drug(id,drugName,drugContent,quantity,pricePerTablet,productionDate,expirationDate);
+        return new Drug(id, drugName, drugContent, quantity, pricePerTablet, productionDate, expirationDate);
     }
 
 }

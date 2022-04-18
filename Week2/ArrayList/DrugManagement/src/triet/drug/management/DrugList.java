@@ -2,8 +2,9 @@ package triet.drug.management;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
 
-public class DrugList{
+public class DrugList {
     private ArrayList<Drug> drugList;
 
     public DrugList() {
@@ -14,14 +15,15 @@ public class DrugList{
         this.drugList = drugList;
     }
 
-    public void addNewDrug(Drug ... newDrug) {
+    public void addNewDrug(Drug... newDrug) {
         Collections.addAll(this.drugList, newDrug);
 //        for (Drug drug:newDrug) {
 //            this.drugList.add(drug);
 //        }
     }
+
     public void addNewDrug(long id, String drugName, int drugContent, int quantity, double pricePerTablet, String productionDate, String expirationDate) {
-        Drug newDrug = new Drug(id,drugName,drugContent,quantity,pricePerTablet,productionDate,expirationDate);
+        Drug newDrug = new Drug(id, drugName, drugContent, quantity, pricePerTablet, productionDate, expirationDate);
         this.drugList.add(newDrug);
     }
 
@@ -31,7 +33,7 @@ public class DrugList{
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         for (Drug drug : drugList) {
             System.out.printf("%-15s %-20s %-25s %-25s %-25s %-25s %-25s \n", drug.getId(), drug.getDrugName(), drug.getDrugContent(),
-                    drug.getQuantity(), drug.getPricePerTablet(), drug.getProductionDate(),drug.getExpirationDate());
+                    drug.getQuantity(), drug.getPricePerTablet(), drug.getProductionDate(), drug.getExpirationDate());
         }
     }
 
@@ -46,4 +48,10 @@ public class DrugList{
     public void removeAllDrugs() {
         this.drugList.removeAll(drugList);
     }
+
+    public boolean isExistedInList(Drug drug) {
+        return this.drugList.contains(drug);
+    }
+
+
 }
