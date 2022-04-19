@@ -4,23 +4,21 @@ import java.util.Arrays;
 
 public class MyList<E> {
     private int size = 0;
-    private static final int CAPACITY = 5;
     private Object[] element;
 
-    public MyList() {
-        element = new Object[CAPACITY];
-    }
-
-    public void doubleCapacity() {
-        element = Arrays.copyOf(element, CAPACITY * 2);
+    public MyList(int size) {
+        this.size = size;
+        element = new Object[size];
     }
 
     public void addElementFromFirst(E... e) {
         if (size < e.length) {
-            doubleCapacity();
+            size=e.length;
+            element = Arrays.copyOf(element, size);
         }
+        int i = 0;
         for (E myE : e) {
-            element[size++] = myE;
+            element[i++] = myE;
         }
     }
 
