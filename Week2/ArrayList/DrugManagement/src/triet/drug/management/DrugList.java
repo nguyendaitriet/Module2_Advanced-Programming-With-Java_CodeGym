@@ -2,9 +2,11 @@ package triet.drug.management;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
+import java.util.Scanner;
 
 public class DrugList {
+    private static final Scanner input = new Scanner(System.in);
+
     private ArrayList<Drug> drugList;
 
     public DrugList() {
@@ -49,9 +51,57 @@ public class DrugList {
         this.drugList.removeAll(drugList);
     }
 
-    public boolean isExistedInList(Drug drug) {
-        return this.drugList.contains(drug);
+    private Drug getInputId() {
+        System.out.print("Enter drug ID: ");
+        long id = input.nextLong();
+        return new Drug(id);
     }
 
+    public boolean isExistedInList() {
+        return this.drugList.contains(getInputId());
+    }
 
+    public boolean removeDrugFromList() {
+        return this.drugList.remove(getInputId());
+    }
+
+    //Not completed
+    public String searchDrugName() {
+        System.out.print("Enter drug name: ");
+        String drugName = input.next();
+        String result = "";
+//        for (Drug drug : drugList) {
+//            if (drug.getDrugName().toLowerCase().contains(drugName)) {
+//                return "Your drug " + drug.getDrugName() + " is available.";
+//            }
+//        }
+        for (Drug drug : drugList) {
+            if (drug.getDrugName().toLowerCase().contains(drugName)) {
+                result += drug.getDrugName() + " ";
+            }
+        }
+        return result.equals("") ? "No drug found!" : "Your drug " + result + " is/are available.";
+    }
+
+    public void sortByDrugName() {
+        this.drugList.sort((o1, o2) -> Integer.compare(o1.getDrugName().compareTo(o2.getDrugName()), 0)
+//                if (o1.getDrugName().compareTo(o2.getDrugName()) > 0)
+//                    return 1;
+//                if (o1.getDrugName().compareTo(o2.getDrugName()) < 0)
+//                    return -1;
+//                return 0;
+        );
+    }
+
+    public void sortByQuantity() {
+        this.drugList.sort((o1, o2) -> Integer.compare(o2.getQuantity(), o1.getQuantity()));
+    }
+
+    public void sortByPricePerTablet() {
+        this.drugList.sort((o1, o2) -> Double.compare(o2.getPricePerTablet(), o1.getPricePerTablet()));
+    }
+
+    public void sortByProductionDate() {
+        this.drugList.sort((o1, o2) -> Integer.compare(o1.getProductionDate().compareTo(o2.getProductionDate()), 0));
+    }
 }

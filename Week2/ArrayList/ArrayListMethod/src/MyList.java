@@ -7,13 +7,13 @@ public class MyList<E> {
         newList = new ArrayList<>();
     }
 
-    public void addElementAtPosition(int index, E ... element){
-        for (E e:element) {
-            newList.add(index++,e);
+    public void addElementAtPosition(int index, E... element) {
+        for (E e : element) {
+            newList.add(index++, e);
         }
     }
 
-    public E  removeElementAtPosition(int index) {
+    public E removeElementAtPosition(int index) {
         return newList.remove(index);
     }
 
@@ -32,9 +32,10 @@ public class MyList<E> {
     public E getElementAtIndex(int index) {
         return newList.get(index);
     }
-     public void clearAllElements() {
+
+    public void clearAllElements() {
         newList.removeAll(newList);
-     }
+    }
 
     @Override
     public String toString() {

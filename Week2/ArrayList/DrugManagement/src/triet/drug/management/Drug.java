@@ -94,6 +94,7 @@ public class Drug {
                 ", expirationDate='" + expirationDate + '\'' +
                 '}';
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -105,4 +106,9 @@ public class Drug {
         Drug other = (Drug) obj;
         return Objects.equals(id, other.id);
     }
+
+//    @Override
+//    public int compareTo(Drug o) {
+//        return this.drugName.compareTo(o.drugName);
+//    }
 }
