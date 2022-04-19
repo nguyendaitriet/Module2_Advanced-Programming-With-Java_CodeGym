@@ -28,7 +28,7 @@ public class MyList<E> {
 //
 //        return Arrays.copyOf(elements,elements.length);
 //    }
-ArrayList
+
     public boolean contains (E o) {
         Object[] es = elements;
         if (o == null) {
@@ -108,7 +108,7 @@ ArrayList
     public void clear() {
         elements=null;
     }
-    
+
     @Override
     public String toString() {
         return Arrays.toString(elements);
