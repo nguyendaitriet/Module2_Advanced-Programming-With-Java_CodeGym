@@ -62,7 +62,9 @@ public class DrugList {
     }
 
     public boolean removeDrugFromList() {
+        if (isExistedInList())
         return this.drugList.remove(getInputId());
+        return !this.drugList.remove(getInputId());
     }
 
     //Not completed
