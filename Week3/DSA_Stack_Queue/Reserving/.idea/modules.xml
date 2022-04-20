@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DSA_Stack_Queue.iml" filepath="$PROJECT_DIR$/DSA_Stack_Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reserving.iml" filepath="$PROJECT_DIR$/Reserving.iml" />
     </modules>
   </component>
 </project>
