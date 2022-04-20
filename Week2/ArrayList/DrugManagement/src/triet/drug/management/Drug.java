@@ -107,6 +107,13 @@ public class Drug {
         return Objects.equals(id, other.id);
     }
 
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+
 //    @Override
 //    public int compareTo(Drug o) {
 //        return this.drugName.compareTo(o.drugName);
