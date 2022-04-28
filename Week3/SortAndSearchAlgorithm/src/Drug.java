@@ -41,7 +41,7 @@ public class Drug implements Comparable<Drug>{
 
     @Override
     public int compareTo(Drug o) {
-        return Integer.compare((this.drugName.compareTo(o.drugName)),0);
+        return this.drugName.compareTo(o.drugName);
     }
 
     @Override

@@ -43,7 +43,7 @@ public class StringSort {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(getNewString("Welcome"));
         System.out.println(getNewString("Welcome"));
     }
 }

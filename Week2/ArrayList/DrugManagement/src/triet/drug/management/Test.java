@@ -1,6 +1,8 @@
 package triet.drug.management;
 
-import java.util.Collections;
+import triet.drug.management.models.Drug;
+import triet.drug.management.models.DrugList;
+
 import java.util.Scanner;
 
 public class Test {

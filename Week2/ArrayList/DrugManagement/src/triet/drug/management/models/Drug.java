@@ -1,6 +1,5 @@
-package triet.drug.management;
+package triet.drug.management.models;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Drug {

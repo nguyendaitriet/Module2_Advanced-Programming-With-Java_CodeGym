@@ -1,4 +1,6 @@
-package triet.drug.management;
+package triet.drug.management.models;
+
+import triet.drug.management.models.Drug;
 
 import java.util.ArrayList;
 import java.util.Collections;
